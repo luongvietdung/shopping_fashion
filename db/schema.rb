@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190605021205) do
+ActiveRecord::Schema.define(version: 20190605015129) do
 
   create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "email", default: "", null: false
@@ -21,5 +21,5 @@ ActiveRecord::Schema.define(version: 20190605021205) do
     t.integer "role"
     t.index ["email"], name: "index_admins_on_email", unique: true
   end
-  
+
 end
