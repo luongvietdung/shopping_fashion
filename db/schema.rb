@@ -21,5 +21,5 @@ ActiveRecord::Schema.define(version: 20190605021205) do
     t.integer "role"
     t.index ["email"], name: "index_admins_on_email", unique: true
   end
-
+  
 end
