@@ -10,4 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
+//= require ./../lib/jquery.easing
+//= require ./../lib/sb-admin-2
 //= require rails-ujs
