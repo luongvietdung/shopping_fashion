@@ -11,6 +11,4 @@
 // about supported directives.
 //
 //= require jquery
-//= require ./../lib/jquery.easing
-//= require ./../lib/sb-admin-2
 //= require rails-ujs
