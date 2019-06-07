@@ -2,6 +2,7 @@
 
 class Admin < ApplicationRecord
   enum role: %i[admin contributor]
+  has_many :products
 
   validates :user_name, presence: true, length: { minimum: 4, maximum: 10 }
 
