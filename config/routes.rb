@@ -6,5 +6,6 @@ Rails.application.routes.draw do
 
   namespace :manager do
     root "static_pages#index"
+    resources :products
   end
 end
