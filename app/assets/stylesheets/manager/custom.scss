@@ -1,0 +1,73 @@
+@import "bootstrap";
+@import "font-awesome";
+
+.sidebar .nav-item .nav-link span {
+  font-size: 1.5rem;
+}
+
+.sidebar .nav-item .nav-link i{
+  font-size: 2rem;
+}
+
+.sidebar .sidebar-brand .sidebar-brand-icon i{
+    font-size: 2rem;
+}
+
+.small{
+  font-size: 100%;
+}
+
+.sidebar .nav-item .collapse .collapse-inner{
+  font-size: 1.5rem;
+}
+
+.dropdown .dropdown-menu {
+  font-size: 1.5rem;
+}
+.bg-login-image {
+  background: url('https://source.unsplash.com/K4mSJ7kc0As/600x800');
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-register-image {
+  background: url('https://source.unsplash.com/Mv9hjnEUHR4/600x800');
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-password-image {
+  background: url('https://source.unsplash.com/oWTW-jNGl9I/600x800');
+  background-position: center;
+  background-size: cover;
+}
+
+form.user {
+
+  .custom-checkbox.small {
+    label {
+      line-height: 1.5rem;
+    }
+  }
+
+  .form-control-user {
+    font-size: 0.8rem;
+    border-radius: 10rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .btn-user {
+    font-size: 0.8rem;
+    border-radius: 10rem;
+    padding: 0.75rem 1rem;
+  }
+
+}
+
+.btn-google {
+  @include button-variant($brand-google, $white);
+}
+
+.btn-facebook {
+  @include button-variant($brand-facebook, $white);
+}

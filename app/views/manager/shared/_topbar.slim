@@ -1,5 +1,10 @@
 nav.navbar.navbar-expand.navbar-light.bg-white.topbar.mb-4.static-top.shadow
   div.navbar-nav.ml-auto
-    div.mr-2.d-none.d-lg-inline.text-gray-600.small.fas.fa-user  Administrator
+    div.mr-2.d-none.d-lg-inline.text-gray-600.small.fas.fa-user  
+    - if admin_signed_in?
+      = link_to current_admin.user_name
     div.fas.fa-sign-out-alt.fa-sm.fa-fw.mr-2
-      a.text-gray-400 href="#" Logout
+      - if admin_signed_in?
+        = link_to "Logout", destroy_admin_session_path, method: :delete
+      - else
+        = link_to "Login", new_admin_session_path
