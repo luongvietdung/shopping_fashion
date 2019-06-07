@@ -6,5 +6,3 @@ nav.navbar.navbar-expand.navbar-light.bg-white.topbar.mb-4.static-top.shadow
     div.fas.fa-sign-out-alt.fa-sm.fa-fw.mr-2
       - if admin_signed_in?
         = link_to "Logout", destroy_admin_session_path, method: :delete
-      - else
-        = link_to "Login", new_admin_session_path
