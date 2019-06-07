@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190605015129) do
+ActiveRecord::Schema.define(version: 20190607014221) do
 
   create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "email", default: "", null: false
@@ -22,4 +22,16 @@ ActiveRecord::Schema.define(version: 20190605015129) do
     t.index ["email"], name: "index_admins_on_email", unique: true
   end
 
+  create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.decimal "price", precision: 10
+    t.integer "quantity"
+    t.text "description"
+    t.bigint "admin_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["admin_id"], name: "index_products_on_admin_id"
+  end
+
+  add_foreign_key "products", "admins"
 end

@@ -25,7 +25,7 @@ gem "font-awesome-sass", "~> 5.8.1"
 group :development, :test do
   gem "pry-rails"
   gem "rspec-rails", "~> 3.8"
-  gem "rubocop", require: false
+  gem "rubocop", '~> 0.5.0', require: false
   gem "shoulda-matchers"
 end
 
