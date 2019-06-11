@@ -1,0 +1,25 @@
+body
+  header.top-header-bar-container
+    .container
+      .row
+        .col-md-12
+          ul.top-header-bar
+            li.top-email
+              i.far.fa-envelope
+              |  shopfashion@gmail.com
+            li.top-cart
+              = link_to "#" do 
+                i.fa.fa-shopping-cart
+                  |  My Cart- $
+                  span.price 0
+            li.top-account
+              a href="https://colorlib.com/tyche/my-account/" 
+                i.fa.fa-user
+                  | Account
+            li.top-search
+              form#searchform_topbar.pull-right action="https://colorlib.com/tyche/" method="get" role="search" 
+                label
+                  span.screen-reader-text
+                  input#search-field-top-bar.search-field-top-bar name="s" placeholder=("Search ...") type="search" value="" /
+                button#search-top-bar-submit.search-top-bar-submit type="submit" 
+                  span.fa.fa-search
