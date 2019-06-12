@@ -1,6 +1,6 @@
 li.product.last
-  a.woocommerce-LoopProduct-link.woocommerce-loop-product__link[href="#"]
-    img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail[width="255" height="320" src="https://colorlib.com/tyche/wp-content/uploads/sites/17/2017/06/woman-1211441_1920-255x320.jpg" alt=""]
+  = link_to "#", class: "woocommerce-LoopProduct-link woocommerce-loop-product__link"
+    = image_tag "https://colorlib.com/tyche/wp-content/uploads/sites/17/2017/06/woman-1211441_1920-255x320.jpg", alt: "", class: "attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
   h2.woocommerce-loop-product__title
     = product.name
   .star-rating[role="img" aria-label="Rated 5.00 out of 5"]
@@ -15,17 +15,6 @@ li.product.last
         span.woocommerce-Price-currencySymbol
           | $
         = product.price
-  a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart[href="#" aria-label="Add “Alani T-Shirt” to your cart" rel="nofollow"]
-    span.fa.fa-shopping-cart
+  = link_to "#", class: "button product_type_simple add_to_cart_button ajax_add_to_cart" do 
+    i.fa.fa-shopping-cart
     |  Add to cart
-
-
-
-
-
-
-
-
-
-
-    

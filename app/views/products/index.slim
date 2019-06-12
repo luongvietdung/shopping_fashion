@@ -1,12 +1,7 @@
 html[lang="en-US"]
   head
-    link#wp-block-library-css[rel="stylesheet" href="https://colorlib.com/tyche/wp-includes/css/dist/block-library/style.min.css?ver=5.2.1" type="text/css" media="all"]
-    link#woocommerce-layout-css[rel="stylesheet" href="https://colorlib.com/tyche/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=3.6.4" type="text/css" media="all"]
-    link#woocommerce-general-css[rel="stylesheet" href="https://colorlib.com/tyche/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=3.6.4" type="text/css" media="all"]
     style#woocommerce-inline-inline-css[type="text/css"]
-      |  .woocommerce form .form-row .required { visibility: visible; } 
-    link#google-fonts-css[rel="stylesheet" href="//fonts.googleapis.com/css?family=Karla%3A400%2C700&amp;ver=5.2.1" type="text/css" media="all"]
-    link#tyche-style-css[rel="stylesheet" href="https://colorlib.com/tyche/wp-content/themes/tyche/assets/css/style.css?ver=5.2.1" type="text/css" media="all"]
+      |  .woocommerce form .form-row .required { visibility: visible; }
   body.archive.post-type-archive.post-type-archive-product.wp-custom-logo.woocommerce.woocommerce-page.woocommerce-js.hfeed
     .row
       .col-md-4
@@ -17,7 +12,7 @@ html[lang="en-US"]
               .row
                 .col-md-12
                   nav.woocommerce-breadcrumb
-                    a[href="https://colorlib.com/tyche"]
+                    =link_to "#"
                       | Home
                     |  / Shop
               .row
