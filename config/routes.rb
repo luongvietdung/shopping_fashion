@@ -11,4 +11,5 @@ Rails.application.routes.draw do
     sessions: "manager/sessions"
   }, path: :manager
   root "static_page#index"
+  get "/shop", to: "products#index"
 end

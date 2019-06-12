@@ -1,0 +1,37 @@
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus,
+.pagination > .active > span,
+.pagination > .active > span:hover,
+.pagination > .active > span:focus {
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 999px;
+  z-index: 3;
+  color: #fff;
+  cursor: default;
+  background-color: #2b2e34 !important;
+  border-color: #f66249 !important;
+}
+.pagination > li > a, .pagination > li > span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857;
+    color: #2b2e34;
+    text-decoration: none;
+    background-color: #fff;
+    border: none;
+}
+.pagination > li > a:hover, .pagination > li > a:focus,
+.pagination > li > span:hover,
+.pagination > li > span:focus {
+  border-radius: 999px;
+  z-index: 2;
+  color: #FFF;
+  background-color: #7d7f82;
+  border-color: #ddd;
+}
+
+.woocommerce ul.products li.last, .woocommerce-page ul.products li.last{
+  margin-right: 18px !important; 
+}
