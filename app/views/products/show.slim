@@ -1,0 +1,109 @@
+= render "banner"
+doctype html
+html lang="en-US" 
+  head
+    title Home - Tyche Demo
+  body.home.page-template-default.page.page-id-2.wp-custom-logo.woocommerce-no-js
+    .site-content
+      section.content-area-1
+        .container
+          .row
+            .col-xs-12
+              #tyche_products-3.tyche-products.primary.widget.widget_tyche_products
+                h3.widget-title
+                  span ALL PRODUCT
+                .row.tyche-product-slider-container
+                  .tyche-product-slider-navigation.hidden-xs
+                    a.prev href="#" 
+                      i.fa.fa-angle-left
+                    a.next href="#" 
+                      i.fa.fa-angle-right
+                  .col-sm-9.col-xs-12
+                    .owl-carousel.tyche-product-slider data-attr-elements="3" 
+                      = render partial: "products" , collection: @products
+                  .col-sm-3.hidden-xs
+                    .tyche-banner style="background-image:url(https://colorlib.com/tyche/wp-content/uploads/sites/17/2017/06/long-dress-1438140_1920.jpg)" 
+                      .tyche-banner-caption
+                        span.first_line SAVE UP TO
+                        span.second_line 50%
+                        span.third_line ON OUR GALLA DRESSES
+                        a href="https://colorlib.com"  BUY NOW
+      section.content-area-3
+        .container
+          .row
+            .col-xs-12
+              #tyche_products-9.tyche-products.orange.widget.widget_tyche_products
+                h3.widget-title
+                  span TOP REVIEW
+                .row.tyche-product-slider-container
+                  .tyche-product-slider-navigation.hidden-xs
+                    a.prev href="#" 
+                      i.fa.fa-angle-left
+                    a.next href="#" 
+                      i.fa.fa-angle-right
+                  .col-xs-12
+                    .owl-carousel.tyche-product-slider data-attr-elements="4" 
+                      = render partial: "products" , collection: @products
+      section.content-area-4
+        .container
+          .row
+            .col-md-6.col-xs-12
+              #tyche_recent-3.tyche-recent-posts.widget.widget_tyche_recent
+                h3.widget-title
+                  span FROM THE BLOG
+                .tyche-recent-post-alternate-widget
+                  .tyche-meta
+                    .tyche-date
+                      span.day 12
+                      span.month Jun
+                    .tyche-image
+                      a href="https://colorlib.com/tyche/2017/06/12/jackets-soul-color/" 
+                        img.attachment-tyche-recent-post-alternate-image.size-tyche-recent-post-alternate-image.wp-post-image alt="" height="90" src="https://colorlib.com/tyche/wp-content/uploads/sites/17/2017/06/down-jackets-1281699_1920-160x90.jpg" width="160" /
+                  .tyche-post-content
+                    p
+                      a href="https://colorlib.com/tyche/2017/06/12/jackets-soul-color/"  Jackets For The Soul. What…
+                    ul.meta-list
+                      li.post-author
+                        icon.fa.fa-user
+                        a href="https://colorlib.com/tyche/author/raibercristian/"  raibercristian
+                      li.post-comments
+                        span.sep /
+                        icon.fa.fa-comments
+                        a href="https://colorlib.com/tyche/2017/06/12/jackets-soul-color/#comments"  1
+            .col-md-6.col-xs-12
+              #tyche_recent-4.tyche-recent-posts.no-title.widget.widget_tyche_recent
+                .tyche-recent-post-alternate-widget
+                  .tyche-meta
+                    .tyche-date
+                      span.day 12
+                      span.month Jun
+                    .tyche-image
+                      a href="https://colorlib.com/tyche/2017/06/12/long-legs-no-longer-myth-check/" 
+                        img.attachment-tyche-recent-post-alternate-image.size-tyche-recent-post-alternate-image.wp-post-image alt="" height="90" src="https://colorlib.com/tyche/wp-content/uploads/sites/17/2017/06/stockings-428602_1920-160x90.jpg" width="160" /
+                  .tyche-post-content
+                    p
+                      a href="https://colorlib.com/tyche/2017/06/12/long-legs-no-longer-myth-check/"  Long Legs? No Longer A…
+                    ul.meta-list
+                      li.post-author
+                        icon.fa.fa-user
+                        a href="https://colorlib.com/tyche/author/raibercristian/"  raibercristian
+                      li.post-comments
+                        span.sep /
+                        icon.fa.fa-comments
+                        a href="https://colorlib.com/tyche/2017/06/12/long-legs-no-longer-myth-check/#comments"  0
+      section.content-area-5
+        .container
+          .row
+            .col-xs-12
+              #tyche_products-10.tyche-products.light_blue.widget.widget_tyche_products
+                h3.widget-title
+                  span TRENDS
+                .row.tyche-product-slider-container
+                  .tyche-product-slider-navigation.hidden-xs
+                    a.prev href="#" 
+                      i.fa.fa-angle-left
+                    a.next href="#" 
+                      i.fa.fa-angle-right
+                  .col-xs-12
+                    .owl-carousel.tyche-product-slider data-attr-elements="4" 
+                      = render partial: "products" , collection: @products

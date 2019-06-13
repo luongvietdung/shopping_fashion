@@ -11,3 +11,8 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require lib/jquery
+//= require lib/owl.carousel.min
+//= require lib/functions
+//= require lib/menu.min
+//= require lib/rocket-loader.min
