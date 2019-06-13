@@ -35,7 +35,6 @@
   background-color: #7d7f82;
   border-color: #ddd;
 }
-
 .woocommerce ul.products li.last, .woocommerce-page ul.products li.last{
   margin-right: 18px !important; 
 }
@@ -153,3 +152,18 @@ body {
     display: inline-block;
     margin: 100px auto;
   }
+.form-control {
+  width: 200px;
+}
+.widget-title{
+  margin-top: 70px;
+}
+#q_price_gteq {
+  width: 100px;
+}
+#q_price_lteq{
+  width: 100px;
+}
+.col-md-6 {
+  width: 35%;
+}

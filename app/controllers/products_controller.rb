@@ -2,6 +2,7 @@
 
 class ProductsController < ApplicationController
   def index
-    @products = Product.page(params[:page]).per(9)
+    @filter = Product.ransack(params[:q])
+    @products = @filter.result.page(params[:page]).per(9)
   end
 end

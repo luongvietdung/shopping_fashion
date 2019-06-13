@@ -27,7 +27,7 @@ gem "faker"
 gem "kaminari"
 gem "carrierwave"
 gem "mini_magick"
-
+gem "ransack"
 group :development, :test do
   gem "pry-rails"
   gem "rspec-rails", "~> 3.8"

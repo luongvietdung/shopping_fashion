@@ -1,22 +1,36 @@
-div.archive.post-type-archive.post-type-archive-product.wp-custom-logo.woocommerce.woocommerce-page.woocommerce-js.hfeed
+.archive.post-type-archive.post-type-archive-product.wp-custom-logo.woocommerce.woocommerce-page.woocommerce-js.hfeed
   .row
-    .col-md-4
+    .col-md-4 
+      #woocommerce_price_filter-3.widget.woocommerce.widget_price_filter
+        h5.widget-title
+          span Filter by price
+          .form-row
+            = search_form_for(@filter, url: shop_path) do |f|
+              .form-group.col-md-6 style=("padding-left: 0px; margin-top: 30px; margin-bottom: 0px; width: 35%;") 
+                = f.label :price, "Min", style: "font-size: 17px;"
+                = f.text_field :price_gteq, placeholder: "$", class: "form-control"
+              .form-group.col-md-6 style=("margin-top: 30px; width: 35%;") 
+                = f.label :price, "Max", style: "font-size: 17px;"
+                = f.text_field :price_lteq, placeholder: "$", class: "form-control" do
+                  i.far.fa-dollar-sign
+              .form-group.col-md-6 style=("padding-left: 0px;")
+                = f.submit 'Search', class: "btn btn-default"
     .col-md-8
       #page.site
-        .site-content
-          .container
-            .row
-              .col-md-12
-                nav.woocommerce-breadcrumb
-                  =link_to "#"
-                    | Home
-                  |  / Shop
-            .row
-              .col-md-8.tyche-has-sidebar
-                h1.woocommerce-products-header__title.page-title
-                  | Shop
-                .woocommerce-notices-wrapper
-                ul.products.columns-3
-                  = render @products
-                .row.text-center
-                  = paginate @products
+         .site-content
+           .container
+             .row
+               .col-md-12
+                 nav.woocommerce-breadcrumb
+                   =link_to "#"
+                     | Home
+                   |  / Shop
+             .row
+               .col-md-8.tyche-has-sidebar
+                 h1.woocommerce-products-header__title.page-title
+                   | Shop
+                 .woocommerce-notices-wrapper
+                 ul.products.columns-3
+                   = render @products
+                 .row.text-center
+                   = paginate @products

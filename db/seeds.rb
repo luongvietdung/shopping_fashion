@@ -29,7 +29,7 @@ admin = Admin.create!(user_name: "BinhPham",
 50.times do |n|
   lname  = Faker::Name.name
   quantity = 1
-  price = 3
+  price = Faker::Number.decimal(2, 3)
   description = Faker::Lorem.sentence(10)
   admin = Admin.first
   Product.create!(name:  lname,
