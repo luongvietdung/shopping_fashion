@@ -2724,7 +2724,6 @@ a:active {
 .sf-menu > li > a,
 .sf-menu > li.dropdown > a {
     padding: 15px 30px 15px 0;
-    color: #ffffff;
 }
 
 .sf-menu > li a i {
@@ -2735,7 +2734,7 @@ a:active {
 
 .sf-menu > li.current-menu-item > a,
 .sf-menu > li.current > a {
-    color: #F66249;
+    color: #FFFF;
 }
 
 .sf-menu > li.sfHover > a:hover,

@@ -173,6 +173,9 @@ body {
 .columns-3{
   width: 150%;
 }
-a:active{
-  color: #F66249
+li a.active {
+  color: #F66249 !important; 
+}
+.sf-menu > li.current-menu-item > a, .sf-menu > li.current > a {
+  color: #FFFF !important; 
 }

@@ -13,7 +13,7 @@ header#masthead.site-header[role="banner"]
               = link_to root_path
                 | Home
             li#menu-item-86.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-86[itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"]
-              = link_to "Shop", shop_path
+              = link_to "Shop", shop_path, class: current_class?(shop_path)
             li#menu-item-84.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-84[itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"]
               a[title="Blog" href="https://colorlib.com/tyche/blog/"]
                 | Blog
