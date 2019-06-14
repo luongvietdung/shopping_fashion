@@ -1,16 +1,15 @@
 .item
   .tyche-product.primary
     .tyche-product-image
-      = image_tag (products.images.first.file_url if products.images.presence) || "/assets/user1.jpg", alt: "", class: "attachment-shop_catalog.size-shop_catalog"
+      = image_tag (products.images.first.file_url if products.images.presence) || "/assets/user1.jpg", size: "45", alt: "Edit Entry", class: "attachment-shop_catalog.size-shop_catalog"
     .tyche-product-body
       h3
-        a.woocommerce-LoopProduct-link.woocommerce-loop-product__link href="https://colorlib.com/tyche/product/black-top/" 
+        a.woocommerce-LoopProduct-link.woocommerce-loop-product__link
           = "#{products.name}"
+      = render "products/rate_product"
       span.price
         span.woocommerce-Price-amount.amount
           span.woocommerce-Price-currencySymbol
             | $
           = " #{products.price}"
-      a.ajax_add_to_cart.add_to_cart_button.button.primary data-product_id="19" data-product_sku="" data-quantity="1" href="/tyche/?add-to-cart=19" rel="nofollow" 
-        span.fa.fa-shopping-cart
-        |  Add to cart
+      = render "products/add_cart"

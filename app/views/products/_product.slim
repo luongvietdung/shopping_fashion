@@ -1,20 +1,13 @@
 li.product.last
   = link_to "#", class: "woocommerce-LoopProduct-link woocommerce-loop-product__link"
-    = image_tag "https://colorlib.com/tyche/wp-content/uploads/sites/17/2017/06/woman-1211441_1920-255x320.jpg", alt: "", class: "attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+    = image_tag (product.images.first.file_url if product.images.presence) || "/assets/user1.jpg", size: "45", alt: "Edit Entry", class: "attachment-shop_catalog.size-shop_catalog"
   h2.woocommerce-loop-product__title
     = product.name
-  .star-rating[role="img" aria-label="Rated 5.00 out of 5"]
-    span[style="width:100%"]
-      | Rated 
-      strong.rating
-        | 5.00
-      |  out of 5
+  = render "products/rate_product"
   span.price
     ins
       span.woocommerce-Price-amount.amount
         span.woocommerce-Price-currencySymbol
           | $
         = product.price
-  = link_to "#", class: "button product_type_simple add_to_cart_button ajax_add_to_cart" do 
-    i.fa.fa-shopping-cart
-    |  Add to cart
+  = render "products/add_cart"
