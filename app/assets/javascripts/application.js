@@ -12,6 +12,7 @@
 //
 //= require rails-ujs
 //= require lib/jquery
+//= require lib/bootstrap.min
 //= require lib/owl.carousel.min
 //= require lib/functions
 //= require lib/menu.min

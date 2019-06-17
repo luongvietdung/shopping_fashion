@@ -1,0 +1,40 @@
+body
+  .site-content
+    .container
+      .row
+        .col-xs-12
+          .tyche-breadcrumbs
+            span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" 
+              = link_to "Home /", root_path
+            span.tyche-breadcrumb-sep
+            span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" 
+              = link_to "Shop /", shop_path
+            span.tyche-breadcrumb-sep
+            span.breadcrumb-leaf My account
+    .container
+      .row
+        #primary.content-area.col-md-12
+          main#main.site-main role="main" 
+            article#post-7.post-7.page.type-page.status-publish.hentry
+              .row
+                .col-md-12
+                  header
+                    h1.page-title.margin-top My account
+              .woocommerce
+                .woocommerce-notices-wrapper
+                h2 Login
+                = form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => "woocommerce-form.woocommerce-form-login.login"}) do |f|
+                  p.woocommerce-form-row.woocommerce-form-row--wide.form-row.form-row-wide
+                    = f.label :email
+                    = f.email_field :email, autofocus: true, autocomplete: "email", class: "woocommerce-Input.woocommerce-Input--text.input-text"
+                  p.woocommerce-form-row.woocommerce-form-row--wide.form-row.form-row-wide
+                    = f.label :password
+                    = f.password_field :password, autocomplete: "current-password", class: "woocommerce-Input.woocommerce-Input--text.input-text"
+                  p.form-row
+                    - if devise_mapping.rememberable?
+                      .field
+                        = f.check_box :remember_me
+                        = f.label :remember_me
+                  .actions
+                    = f.submit "Log in"
+                = render "users/shared/links"
