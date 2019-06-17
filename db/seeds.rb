@@ -1,4 +1,4 @@
-#puts 'create users'
+puts 'create users'
 user = User.create!(user_name: "NinhPham",
                     email: "ninhpham@gmail.com",
                     password:    "123456",
@@ -29,7 +29,7 @@ admin = Admin.create!(user_name: "BinhPham",
 50.times do |n|
   lname  = Faker::Name.name
   quantity = 1
-  price = Faker::Number.decimal(2, 3)
+  price = 3
   description = Faker::Lorem.sentence(10)
   admin = Admin.first
   Product.create!(name:  lname,

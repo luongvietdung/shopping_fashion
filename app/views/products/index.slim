@@ -1,23 +1,17 @@
-.archive.post-type-archive.post-type-archive-product.wp-custom-logo.woocommerce.woocommerce-page.woocommerce-js.hfeed
-  .row
-    .col-md-4 
-      = render "filter.slim"
-    .col-md-8
-      #page.site
-         .site-content
-           .container1
-             .row
-               .col-md-12
-                 nav.woocommerce-breadcrumb
-                   =link_to "#"
-                     | Home
-                   |  / Shop
-             .row
-               .col-md-8.tyche-has-sidebar
-                 h1.woocommerce-products-header__title.page-title
-                   | Shop
-                 .woocommerce-notices-wrapper
-                 ul.products.columns-3
-                   = render @products
-                   .row.text-center
-                     = paginate @products
+div.archive.post-type-archive.post-type-archive-product.wp-custom-logo.woocommerce.woocommerce-page.woocommerce-js.hfeed
+  .container
+    .row
+      .col-md-12
+        nav.woocommerce-breadcrumb
+         =link_to "Home/Shop","#"
+    .row
+      .col-md-4
+        = render "filter.slim"
+      .col-md-8.tyche-has-sidebar
+        h1.woocommerce-products-header__title.page-title
+          | Shop
+        .woocommerce-notices-wrapper
+        ul.products.columns-3
+          = render @products
+          .row.text-center
+            = paginate @products
