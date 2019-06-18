@@ -2,7 +2,6 @@
 
 Rails.application.routes.draw do
   devise_for :users, controllers: {
-    sessions: "users/sessions"
   }, path: :users
   namespace :manager do
     root "static_pages#index"

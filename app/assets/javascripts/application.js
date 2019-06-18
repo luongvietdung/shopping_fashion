@@ -17,3 +17,4 @@
 //= require lib/functions
 //= require lib/menu.min
 //= require lib/rocket-loader.min
+//= require toastr

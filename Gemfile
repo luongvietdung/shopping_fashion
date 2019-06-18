@@ -10,6 +10,7 @@ end
 gem "rails", "~> 5.1.7"
 gem "dotenv-rails"
 gem "devise"
+gem "toastr-rails"
 # Use mysql as the database for Active Record
 gem "mysql2"
 gem "puma", "~> 3.7"
