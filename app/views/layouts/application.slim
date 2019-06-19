@@ -16,8 +16,7 @@ html
     = render "layouts/headers"
   body
     .container-fluid
-      - flash.each do |message_type, message|
-        div class=("alert alert-#{message_type}") = message
+      = flash_messages
       = yield
     = render "layouts/footers"
     = render "layouts/footer"
