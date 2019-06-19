@@ -209,6 +209,13 @@ img {
   border-style: none;
 }
 
+.image-upload img{
+  width: 350px;
+  height: 245px;
+  padding-left: 100px;
+  padding-right: 0px;
+}
+
 svg {
   overflow: hidden;
   vertical-align: middle;
@@ -3463,7 +3470,7 @@ input[type="button"].btn-block {
   padding: 0.25rem 1.5rem;
   clear: both;
   font-weight: 400;
-  color: #3a3b45;
+  color: #ffff;
   text-align: inherit;
   white-space: nowrap;
   background-color: transparent;
@@ -4483,6 +4490,7 @@ input[type="button"].btn-block {
 .navbar-nav .dropdown-menu {
   position: static;
   float: none;
+  background-color: #4569d9b5
 }
 
 .navbar-text {
@@ -10374,6 +10382,7 @@ button.bg-dark:focus {
 
 .text-primary {
   color: #4e73df !important;
+  font-size: 20px;
 }
 
 a.text-primary:hover, a.text-primary:focus {
@@ -11138,9 +11147,10 @@ a:focus {
   width: 6.5rem;
 }
 
+
 .sidebar .nav-item .nav-link span {
   font-size: 1.5rem;
-  display: block;
+  display: inline;
 }
 
 .sidebar .nav-item.active .nav-link {
@@ -11249,7 +11259,7 @@ a:focus {
 .sidebar .sidebar-brand {
   height: 4.375rem;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 800;
   padding: 1.5rem 1rem;
   text-align: center;
@@ -11311,11 +11321,11 @@ a:focus {
     width: 14rem;
   }
   .sidebar .nav-item .nav-link i {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     margin-right: 0.25rem;
   }
   .sidebar .nav-item .nav-link span {
-    font-size: 1.5rem;
+    font-size: 2rem;
     display: inline;
   }
   .sidebar .nav-item .nav-link[data-toggle="collapse"]::after {

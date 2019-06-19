@@ -242,3 +242,13 @@ li a.active {
     margin: 100px auto;
   }
 #success_message{ display: none;}
+
+.btn.btn-primary {
+  border: 2px solid;
+  border-color: #4569d9 !important;
+  border-radius: 3px;
+  background: #4569d9 !important;
+  color: #FFF;
+  font-size: 15px;
+  padding: 8px 20px;
+}

@@ -3,7 +3,7 @@
 body
   .container.tm-mt-big.tm-mb-big
     .d-sm-flex.align-items-center.justify-content-between.mb-4
-      h1.mb-0.text-gray-800 Add Product
+      h1.mb-0.text-gray-800 Edit Product
     .row
       .col-md-12
         .tm-bg-primary-dark.tm-block.tm-block-h-auto
@@ -29,14 +29,20 @@ body
                         label for="name" 
                           | Quantity
                         = f.number_field :quantity, id: "form-control-name", class: "form-control"
+                      .image-upload#photo_image
+                        = image_tag("defaul.png")
+                        label for="file_input" 
+                          span ADD NEW IMAGE
+                        = f.file_field :file, name: "product[images][]", id: "file_input", multiple: true
                       .form-group.mb-3
-                        = f.submit "Add Product Now",id: "btn-product", class: "btn btn-primary btn-block buton text-uppercase form-control"
+                        = f.submit "Update Product Now",id: "btn-product", class: "btn btn-primary btn-block text-uppercase form-control"
                 .col-xl-6.col-lg-6.col-md-12.mx-auto.mb-4
-                  .tm-product-img-dummy.mx-auto
-                    i.fas.fa-cloud-upload-alt.tm-upload-icon onclick="document.getElementById('fileInput').click()"
                   = f.fields_for :images do |p| 
-                    .image-upload 
+                    .image-upload#photo-name
+                      = image_tag p.object.file_url
+                      = p.hidden_field :id
+                      = p.hidden_field :file_cache, id: "photo-name"
                       br
-                        label for="file-input" 
-                          span UPLOAD IMAGE
-                        = p.file_field :file, name: "product[images][]", id: "file-input", multiple: true
+                      label for="file-input-#{p.object.id}" 
+                        span CHANGE IMAGE
+                      = p.file_field :file, id: "file-input-#{p.object.id}"

@@ -1845,9 +1845,9 @@ input[type="submit"],
 .tyche-product-slider-container .tyche-banner a,
 .woocommerce .price_slider_amount .button {
     border: 2px solid;
-    border-color: #F66249;
+    border-color: #4569d9;
     border-radius: 3px;
-    background: #F66249;
+    background: #4569d9;
     color: #FFF;
     font-size: 15px;
     padding: 8px 20px;
@@ -2596,17 +2596,17 @@ textarea {
 --------------------------------------------------------------*/
 
 a {
-    color: #F66249;
+    color: #ffff;
 }
 
 a:visited {
-    color: #f88c7a;
+    color: #ffff;
 }
 
 a:hover,
 a:focus,
 a:active {
-    color: #f43818;
+    color: #ffff;
 }
 
 a:focus {

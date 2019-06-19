@@ -4,11 +4,13 @@ tr
   td
     = product.description
   td
-    = product.price
+    = number_to_currency(product.price)
   td
     = product.quantity
   td 
     = image_tag (product.images.first.file_url if product.images.presence) || "/assets/user.png", size: "50", alt: "Edit Entry"
   td
-    button.btn.btn-primary.mr-5 type="button" Edit 
-    button.btn.btn-danger type="button" Delete
+    = link_to edit_manager_product_path(product), class: "btn btn-danger mr-5" do
+      span  Edit 
+    = link_to manager_product_path(product), method: :delete, class: "btn btn-primary", data: {confirm: "Are You Sure ?"} do
+      span Delete

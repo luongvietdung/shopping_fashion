@@ -11,22 +11,23 @@
               #dataTable_length.dataTables_length
                 = link_to new_manager_product_path, class: "btn btn-success" do
                   | Add New Product
+          br
           .row
             .col-sm-12
               table#dataTable.table.table-bordered.dataTable[ style="width: 100%;"]
                 thead
                   tr[role="row"]
-                    th.sorting_asc[style="width: 120px;"]
+                    th.sorting_asc[style="width: 80px;"]
                       | Name
                     th.sorting[style="width: 150px;"]
                       | Description
-                    th.sorting[style="width: 1px;"]
+                    th.sorting[style="width: 30px;"]
                       | Price
-                    th.sorting[style="width: 1px;"]
+                    th.sorting[style="width: 30px;"]
                       | Quantity
-                    th.sorting[style="width: 1px;"]
-                      | Image
                     th.sorting[style="width: 50px;"]
+                      | Image
+                    th.sorting[style="width: 80px;"]
                       | Action                                        
                 tbody
                   = render @products          
