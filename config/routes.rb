@@ -1,9 +1,14 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  devise_for :users, controllers: {
-    sessions: "users/sessions"
-  }, path: :users
+  devise_for :users, skip: :all
+  as :user do
+    get "/login" => "devise/sessions#new", :as => :new_user_session
+    post "/login" => "devise/sessions#create", :as => :user_session
+    delete "/logout" => "devise/sessions#destroy", :as => :destroy_user_session
+    get "/register" => "devise/registrations#new", :as => :new_user_registration
+    post "/register" => "devise/registrations#create", :as => :user_registration
+  end
   namespace :manager do
     root "static_pages#index"
     resources :users

@@ -19,6 +19,7 @@ body.bg-gradient-primary
                       .custom-control.custom-checkbox.small
                         - if devise_mapping.rememberable?
                           = f.check_box :remember_me
+                          | &emsp;
                           = f.label :remember_me
                     = f.submit "Log in", class: "btn btn-primary btn-user btn-block"
                     hr/
