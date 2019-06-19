@@ -1,0 +1,9 @@
+<li class="product type-product post-15 status-publish last instock product_cat-tops product_tag-black product_tag-shirt product_tag-top has-post-thumbnail taxable shipping-taxable purchasable product-type-simple">
+   <%= link_to @another_product.images.first.file_url do %>
+     <%= image_tag @another.images.first.file_url(:thumb), class: "some css class here" %>
+  <% end %>
+    <h2 class="woocommerce-loop-product__title"><%= @another_product.name%></h2>
+    <span class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span><%= @another.price%></span></span>
+  </a>
+
+</li>
