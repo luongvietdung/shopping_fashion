@@ -1,9 +1,9 @@
-- @another_products.each do |an|
-  li.product.last
-    = link_to an.images.first.file_url do
-      = image_tag an.images.first.file_url(:thumb)
-    h2.woocommerce-loop-product__title= link_to an.name
-    span.price
-      span.woocommerce-Price-currencySymbol $
-      = an.price
-    = render "products/add_cart"
+li.product.last
+  = link_to another_products.images.first.file_url do
+    = image_tag another_products.images.first.file_url(:thumb)
+  h2.woocommerce-loop-product__title
+    = link_to another_products.name, another_products
+  span.price
+    span.woocommerce-Price-currencySymbol $
+    = another_products.price
+  = render "products/add_cart"

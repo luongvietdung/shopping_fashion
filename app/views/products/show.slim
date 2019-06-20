@@ -14,7 +14,8 @@
                   br
                   .row.tyche-product-slider-container
                     .col-xs-12
-                      .owl-carousel.tyche-product-slider data-attr-elements="4"  = render partial: "thumbs"
+                      .owl-carousel.tyche-product-slider data-attr-elements="4"
+                        = render partial: "thumbs", collection: @thumbs
                       .tyche-product-slider-navigation.hidden-xs
                         a.prev href="#" 
                           i.fa.fa-angle-left
@@ -38,4 +39,4 @@
               section.related.products
                 h2 Related products
                 ul.products.columns-4
-                  = render partial: "another"
+                  = render partial: "another", collection: @another_products, as: :another_products
