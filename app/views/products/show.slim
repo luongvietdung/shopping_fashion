@@ -9,13 +9,13 @@
             .product
               .images
                 figure.woocommerce-product-gallery__wrapper
-                  = link_to @product.images.first.file_url do
+                  = link_to @product.images.first.file_url, {class: "thumbs"} do
                     = image_tag @product.images.first.file_url(:thumb_nail)
                   br
                   .row.tyche-product-slider-container
                     .col-xs-12
                       .owl-carousel.tyche-product-slider data-attr-elements="4"
-                        = render partial: "thumbs", collection: @thumbs
+                        = render partial: "thumbs", collection: @thumbs, as: :thumb
                       .tyche-product-slider-navigation.hidden-xs
                         a.prev href="#" 
                           i.fa.fa-angle-left

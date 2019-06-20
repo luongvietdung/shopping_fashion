@@ -20,3 +20,7 @@
 /.env
 /public/uploads/image/*
 /public/uploads/tmp/*
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml

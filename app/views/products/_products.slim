@@ -1,7 +1,9 @@
-.item
+.itemhumbs).find(Product.pluck(:id))
+    @thumbs = @product.images.all
   .tyche-product.primary
     .tyche-product-image
-      = image_tag (products.images.first.file_url(:thumb) if products.images.presence) || "/assets/user1.jpg", alt: "Edit Entry", class: "attachment-shop_catalog.size-shop_catalog"
+      = link_to products.images.first.file_url, {class: "thumbs1"} do
+        = image_tag (products.images.first.file_url(:thumb) if products.images.presence) || "/assets/user1.jpg", alt: "Edit Entry", class: "attachment-shop_catalog.size-shop_catalog"
     .tyche-product-body
       h3
         a.woocommerce-LoopProduct-link.woocommerce-loop-product__link

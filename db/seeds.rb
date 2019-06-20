@@ -1,4 +1,3 @@
-
 puts 'create users'
 user = User.create!(user_name: "NinhPham",
                     email: "ninhpham@gmail.com",
