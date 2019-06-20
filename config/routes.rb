@@ -23,4 +23,5 @@ Rails.application.routes.draw do
   }, path: :manager
   get "/shop", to: "products#index"
   root "static_page#index"
+  resources :products, only: [:show]
 end

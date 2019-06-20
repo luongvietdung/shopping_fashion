@@ -302,4 +302,19 @@ li a.active {
 
 .full-name {
   font-size: 30px;
+
+.woocommerce-loop-product__title {
+  a {
+  color: black !important;
+  }
+  a:hover {
+  color: #F66249 !important;
+  }
+}
+.woocommerce-Price-amount, .amount {
+  color: #000000;
+}
+.mfp-close{
+  border-color: #f87a7a00 !important;
+  background: #f87a7a00 !important;
 }

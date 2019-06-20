@@ -1,0 +1,3 @@
+- @thumbs.each do |thumb|
+  = link_to thumb.file_url, {class: "thumbs"} do
+    = image_tag thumb.file_url(:thumb)
