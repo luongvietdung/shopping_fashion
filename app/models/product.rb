@@ -2,6 +2,7 @@
 
 class Product < ApplicationRecord
   belongs_to :admin
+  has_many :order_items
   has_many :images, as: :imageable
 
   validates :name, presence: true
