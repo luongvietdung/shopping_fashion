@@ -5,7 +5,7 @@ class CreateOrders < ActiveRecord::Migration[5.1]
       t.string :phone_number
       t.string :full_name
       t.integer :status
-      t.reference :user,foreign_key: true
+      t.references :user,foreign_key: true
       
       t.timestamps
     end

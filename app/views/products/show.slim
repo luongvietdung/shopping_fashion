@@ -1,0 +1,43 @@
+.product-template-default.single.single-product.postid-19.wp-custom-logo.woocommerce.woocommerce-page.woocommerce-no-js
+  #page.site
+    .site-content
+      .container
+        .row
+          .col-md-12
+            nav.woocommerce-breadcrumb
+              a Home/Shop/#{@product.name}
+            .product
+              .images
+                figure.woocommerce-product-gallery__wrapper
+                  = link_to @product.images.first.file_url, {class: "thumbs"} do
+                    = image_tag @product.images.first.file_url(:thumb_nail)
+                  br
+                  .row.tyche-product-slider-container
+                    .col-xs-12
+                      .owl-carousel.tyche-product-slider data-attr-elements="4"
+                        = render partial: "thumbs", collection: @thumbs, as: :thumb
+                      .tyche-product-slider-navigation.hidden-xs
+                        a.prev href="#" 
+                          i.fa.fa-angle-left
+                        a.next href="#" 
+                          i.fa.fa-angle-right
+              .summary
+                h1.product_title
+                  = @product.name
+                .woocommerce-product-details__short-description
+                  p
+                    = @product.description
+                p.price
+                  span.woocommerce-Price-amount
+                    span.woocommerce-Price-currencySymbol $
+                    = @product.price
+                h5 
+                form.cart method="post" 
+                  .quantity
+                    = text_area_tag(:message, "Quantity", size: "10x1")
+                  button.single_add_to_cart_button.button.alt name="add-to-cart" type="submit" value="19"  Add to cart
+              section.related.products
+                h2 Related products
+                ul.products.columns-4
+                  = render partial: "another", collection: @another_products, as: :another_products
+

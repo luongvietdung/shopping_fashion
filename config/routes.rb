@@ -9,14 +9,19 @@ Rails.application.routes.draw do
     get "/register" => "devise/registrations#new", :as => :new_user_registration
     post "/register" => "devise/registrations#create", :as => :user_registration
   end
+
   namespace :manager do
     root "static_pages#index"
     resources :users
     resources :products
   end
+
+  resources :users
+  
   devise_for :admins, controllers: {
     sessions: "manager/sessions"
   }, path: :manager
   get "/shop", to: "products#index"
   root "static_page#index"
+  resources :products, only: [:show]
 end

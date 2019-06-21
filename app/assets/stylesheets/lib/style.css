@@ -1845,9 +1845,9 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"], .tyche-blog-post .more-link, .main-slider .hero-caption .btn-group a, .woocommerce a.button, .woocommerce div.product form.cart .button, .tyche-product-slider-container .tyche-banner a, .woocommerce .price_slider_amount .button {
   border: 2px solid;
-  border-color: #F66249;
+  border-color: #f6624900;
   border-radius: 3px;
-  background: #F66249;
+  background: #f6624900;
   color: #FFF;
   font-size: 15px;
   padding: 8px 20px;
@@ -2358,7 +2358,7 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #F66249;
+  color: #080808;
 }
 a:visited {
   color: #ffff;
@@ -5085,7 +5085,7 @@ a:hover, a:active {
 }
 .woocommerce ul.products li.product .price ins {
   display: inline-block;
-  color: #F66249;
+  color: #000000;
 }
 .woocommerce .woocommerce-products-header__title.page-title {
   display: inline-block;
