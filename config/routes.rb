@@ -24,4 +24,6 @@ Rails.application.routes.draw do
   get "/shop", to: "products#index"
   root "static_page#index"
   resources :products, only: [:show]
+  resource :cart, only: [:show]
+  resources :order_items, only: [:create, :update, :destroy]
 end
