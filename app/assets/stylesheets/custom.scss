@@ -263,7 +263,8 @@ li a.active {
     }
 
 .container  {
-      padding-top: 20px;
+  padding-top: 20px;
+
 }
 
 .user-name {
@@ -317,4 +318,38 @@ li a.active {
 .mfp-close{
   border-color: #f87a7a00 !important;
   background: #f87a7a00 !important;
+}
+.col-md-8.col-xs-12.col-sm-6.col-lg-8 {
+  left: 50px;
+  bottom: 200px;
+}
+
+/* Edit/PassWord Profile */
+
+.edit-profile {
+  margin-left: 580px;
+  font-size: 50px;
+  color: #2279d3;
+}
+
+.form-group {
+  margin-left: 0px;
+  margin-right: 200px;
+  font-size: 20px;
+}
+
+.input-group .form-control {
+  width: 567px;
+}
+
+.col-md-8 {
+  margin-left: 250px;
+}
+
+.form-group.col-md-12 {
+  color: black;
+}
+
+.input-group .form-control:last-child {
+  border-radius: 5px;
 }

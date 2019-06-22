@@ -16,8 +16,8 @@ Rails.application.routes.draw do
     resources :products
   end
 
-  resources :users
-  
+  resources :users, only: %i[show edit update]
+
   devise_for :admins, controllers: {
     sessions: "manager/sessions"
   }, path: :manager
