@@ -9,8 +9,8 @@
             .product
               .images
                 figure.woocommerce-product-gallery__wrapper
-                  = link_to @product.images.first.file_url, {class: "thumbs"} do
-                    = image_tag @product.images.first.file_url(:thumb_nail)
+                  = link_to (@product.images.first.file_url if @product.images.presence) || "/assets/user1.jpg", {class: "thumbs"} do
+                    = image_tag (@product.images.first.file_url(:thumb_nail) if @product.images.presence) || "/assets/user1.jpg"
                   br
                   .row.tyche-product-slider-container
                     .col-xs-12
@@ -31,13 +31,9 @@
                   span.woocommerce-Price-amount
                     span.woocommerce-Price-currencySymbol $
                     = @product.price
-                h5 
-                form.cart method="post" 
-                  .quantity
-                    = text_area_tag(:message, "Quantity", size: "10x1")
-                  button.single_add_to_cart_button.button.alt name="add-to-cart" type="submit" value="19"  Add to cart
+                h2 
+                = button_to "Add to cart", carts_path(product_id: @product.id), remote: true , class: "btn btn-primary"
               section.related.products
                 h2 Related products
                 ul.products.columns-4
                   = render partial: "another", collection: @another_products, as: :another_products
-

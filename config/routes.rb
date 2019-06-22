@@ -22,8 +22,8 @@ Rails.application.routes.draw do
     sessions: "manager/sessions"
   }, path: :manager
   get "/shop", to: "products#index"
+
   root "static_page#index"
   resources :products, only: [:show]
-  resource :cart, only: [:show]
-  resources :order_items, only: [:create, :update, :destroy]
+  resources :carts, only: %i[create]
 end

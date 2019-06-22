@@ -3,16 +3,13 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
-  helper_method :current_order
+  before_action :cart
+  helper_method :cart
 
-  def current_order
-    if !session[:order_id].nil?
-      Order.find(session[:order_id])
-    else
-      Order.new
-    end
+  def cart
+    @cart ||= Cart.new(session[:cart])
   end
-  
+
   protected
 
   def configure_permitted_parameters

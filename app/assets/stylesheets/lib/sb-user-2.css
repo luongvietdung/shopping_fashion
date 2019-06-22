@@ -4830,8 +4830,8 @@ a:active {
 }
 
 .top-header-bar-container .top-header-bar li.top-cart {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
     background: #F66249;
 }
 

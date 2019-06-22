@@ -1,9 +1,8 @@
 li.product.last
-  = link_to another_products.images.first.file_url do
-    = image_tag another_products.images.first.file_url(:thumb)
+  = image_tag (another_products.images.first.file_url(:thumb) if another_products.images.presence) || "/assets/user1.jpg"
   h2.woocommerce-loop-product__title
     = link_to another_products.name, another_products
   span.price
     span.woocommerce-Price-currencySymbol $
     = another_products.price
-  = render "products/add_cart"
+  = button_to "Add to cart", carts_path(product_id: another_products.id), remote: true , class: "btn btn-primary"

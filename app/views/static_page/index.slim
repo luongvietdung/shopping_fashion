@@ -20,8 +20,7 @@ html lang="en-US"
                       i.fa.fa-angle-right
                   .col-xs-12
                     .owl-carousel.tyche-product-slider data-attr-elements="4" 
-                      - @products.each do |product|
-                        = render "products", product: product, order_item: @order_item
+                      = render partial: "products" , collection: @products, as: :product
       section.content-area-3
         .container
           .row
@@ -36,9 +35,8 @@ html lang="en-US"
                     a.next href="#" 
                       i.fa.fa-angle-right
                   .col-xs-12
-                    .owl-carousel.tyche-product-slider data-attr-elements="4" 
-                      - @products.each do |product|
-                        = render "products", product: product, order_item: @order_item
+                    .owl-carousel.tyche-product-slider data-attr-elements="4"
+                      = render partial: "products" , collection: @products, as: :product 
       section.content-area-5
         .container
           .row
@@ -53,6 +51,5 @@ html lang="en-US"
                     a.next href="#" 
                       i.fa.fa-angle-right
                   .col-xs-12
-                    .owl-carousel.tyche-product-slider data-attr-elements="4" 
-                      - @products.each do |product|
-                        = render "products", product: product, order_item: @order_item
+                    .owl-carousel.tyche-product-slider data-attr-elements="4"
+                      = render partial: "products" , collection: @products, as: :product

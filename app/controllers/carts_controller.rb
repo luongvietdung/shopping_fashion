@@ -1,5 +1,9 @@
+# frozen_string_literal: true
+
 class CartsController < ApplicationController
-  def show
-    @order_items = current_order.order_items
+  def create
+    @cart.add_product(params[:product_id])
+    session[:cart] = @cart.data
+    @cart.cart_total
   end
 end
