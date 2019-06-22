@@ -33,6 +33,30 @@
                     = @product.price
                 h2 
                 = button_to "Add to cart", carts_path(product_id: @product.id), remote: true , class: "btn btn-primary"
+                h5 
+                form.cart method="post" 
+                  .quantity
+                    = text_area_tag(:message, "Quantity", size: "10x1")
+                  button.single_add_to_cart_button.button.alt name="add-to-cart" type="submit" value="19"  Add to cart
+              .woocommerce-tabs
+                ul.tabs.wc-tabs 
+                  li#tab-title-reviews aria-controls="tab-reviews" role="tab" 
+                    a href="#tab-reviews"  Reviews (#{@product.reviews.count})
+                #tab-reviews.woocommerce-Tabs-panel--reviews.wc-tab
+                  #reviews
+                    #comments
+                      h2.woocommerce-Reviews-title
+                        =@product.reviews.count 
+                        |  reviews for 
+                        =@product.name
+                      - if @product.reviews.count > 0
+                        #review-form
+                          = render partial: "reviews/review", collection: @reviews, as: :review
+                      - else
+                        | There are no reviews yet   
+                    br       
+                    #review-list
+                      = render partial: "reviews/form_review"
               section.related.products
                 h2 Related products
                 ul.products.columns-4

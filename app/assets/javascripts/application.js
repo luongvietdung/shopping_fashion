@@ -20,3 +20,5 @@
 //= require lib/rocket-loader.min
 //= require toastr
 //= require magnific-popup
+//= require lib/jquery.raty
+//= require lib/rate.min

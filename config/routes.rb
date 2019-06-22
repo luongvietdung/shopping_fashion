@@ -22,9 +22,11 @@ Rails.application.routes.draw do
   devise_for :admins, controllers: {
     sessions: "manager/sessions"
   }, path: :manager
+
   get "/shop", to: "products#index"
 
   root "static_page#index"
   resources :products, only: [:show]
   resources :carts, only: %i[create]
+  resources :reviews
 end

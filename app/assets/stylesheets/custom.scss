@@ -357,3 +357,20 @@ li a.active {
 .quantity{
   color : #25262b !important;
 }
+.mfp-arrow{
+  border-color: #f87a7a00 !important;
+  background: #f87a7a00 !important;
+}
+
+.star-rating {
+  height: 15px !important;
+  width: 7.4em !important;
+}
+
+.star-rating::before {
+  content: '' !important;
+}
+.owl-carousel .owl-item img {
+    display: unset;
+    width: unset;
+}

@@ -5,6 +5,7 @@ class Product < ApplicationRecord
   belongs_to :admin
   has_many :order_items
   has_many :images, as: :imageable
+  has_many :reviews
   friendly_id :slug_candidates, use: %i[slugged finders]
 
   validates :name, presence: true
@@ -24,4 +25,8 @@ class Product < ApplicationRecord
     update_attribute(:slug, nil)
     save!
   end
+  
+  def avg_rating
+    reviews.average(:rate)
+  end 
 end

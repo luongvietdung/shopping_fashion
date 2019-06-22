@@ -5,8 +5,11 @@
     .tyche-product-body
       h3
         a.woocommerce-LoopProduct-link.woocommerce-loop-product__link
-          = link_to product.name, product
-      = render "products/rate_product"
+          = link_to products.name, products
+        - if products.reviews.presence
+          .star-rating data-score=products.avg_rating
+        - else
+          .star-rating data-score=0
       span.price
         span.woocommerce-Price-amount.amount
           span.woocommerce-Price-currencySymbol
