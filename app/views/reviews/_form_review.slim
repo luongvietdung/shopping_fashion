@@ -15,6 +15,7 @@
             p.form-submit
               = f.submit "Add", class: "submit"
           - else
-            = f.submit "Log in"
+            .submit
+              = link_to "Login", "#myModal", data: {toggle: "modal"}, class:"btn btn-danger"  
   .clear
   br

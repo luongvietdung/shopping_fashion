@@ -50,12 +50,12 @@
                         |  reviews for 
                         =@product.name
                       - if @product.reviews.count > 0
-                        #review-form
+                          #review-list
                           = render partial: "reviews/review", collection: @reviews, as: :review
                       - else
                         | There are no reviews yet   
                     br       
-                    #review-list
+                    #review-form
                       = render partial: "reviews/form_review"
               section.related.products
                 h2 Related products

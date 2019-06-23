@@ -25,8 +25,8 @@ class Product < ApplicationRecord
     update_attribute(:slug, nil)
     save!
   end
-  
+
   def avg_rating
     reviews.average(:rate)
-  end 
+  end
 end
