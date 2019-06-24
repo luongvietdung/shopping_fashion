@@ -425,6 +425,13 @@ li a.active {
 
 .order-product-total {
   background-color: #dddddd4d;
+
+.wc-proceed-to-checkout{
+  text-align: center; 
+  }
+  .woocommerce a.button.alt{
+    padding-top: 15px !important; 
+  }
 }
 
 .table-responsive {
