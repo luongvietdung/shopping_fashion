@@ -8,10 +8,8 @@ body
               i.far.fa-envelope
               |  shopfashion@gmail.com
             li.top-cart
-              = link_to "#" do 
-                i.fa.fa-shopping-cart
-                  |  My Cart - $
-                  span.price  0
+              .cart-text
+                = render "layouts/cart_text"
             li.top-account
               - if user_signed_in?
                   i.fa.fa-user
