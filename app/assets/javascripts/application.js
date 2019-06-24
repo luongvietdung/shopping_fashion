@@ -10,8 +10,8 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require rails-ujs
 //= require jquery
+//= require jquery_ujs
 //= require lib/bootstrap.min
 //= require lib/functions
 //= require lib/owl.carousel.min
@@ -20,3 +20,5 @@
 //= require lib/rocket-loader.min
 //= require toastr
 //= require magnific-popup
+//= require lib/jquery.raty
+//= require lib/rate.min

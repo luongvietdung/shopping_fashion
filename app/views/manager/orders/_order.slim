@@ -1,0 +1,16 @@
+tr.odd role="row" 
+  td 
+    = order.id
+  td.sorting_1 
+    = order.full_name
+  td
+    = order.phone_number
+  td
+    = order.address
+  td
+    = order.created_at.strftime("%d/%m/%Y") 
+  td
+    = form_for order , url: manager_orders_path(order), method: :patch do |f|
+      = f.hidden_field :order_id, value: order.id
+      .form-group
+        = f.select :status, Order.statuses.keys , {}, class: "sel", id:"status-btn", data: {value: f.object.status}

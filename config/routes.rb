@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     root "static_pages#index"
     resources :users
     resources :products
+    resources :orders, only: [:index]
   end
 
   resources :users, only: %i[show edit update]
@@ -21,9 +22,11 @@ Rails.application.routes.draw do
   devise_for :admins, controllers: {
     sessions: "manager/sessions"
   }, path: :manager
+
   get "/shop", to: "products#index"
 
   root "static_page#index"
   resources :products, only: [:show]
   resources :carts, only: %i[create]
+  resources :reviews, only: %i[create new show index]
 end
