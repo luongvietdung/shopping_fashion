@@ -2,12 +2,12 @@
   #review_form_wrapper
     #review_form
       #respond.comment-respond
-        = form_for @review, remote: true, id:"commentform", class: "comment-form" do |f|
+        = form_for Review.new, remote: true, id:"commentform", class: "comment-form" do |f|
           = f.hidden_field :product_id, value: @product.id
           .field
             = f.label :rate, "Your rate"
             #star-rating
-          br/
+          br
           p.comment-form-comment
             = f.label :content, "Your review content", class: "required"
             = f.text_area :content, id: "comment", cols: "45", rows: "8"

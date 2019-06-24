@@ -1,2 +1,13 @@
-$("#review-list").append("<%= j (render :partial => @review, :locals => {:review => @review}) %>");
-$("#review-form").html("<%= j render partial: "reviews/form_review" %>")
+$("#review-list").html("<%= j render partial: "reviews/review", collection: @reviews, as: :review %>");
+$("#review-form").html("<%= j render partial: "reviews/form_review", review: @review %>")
+$('.star-rating').raty({
+  path: '/assets/',
+  readOnly: true,
+  score: function() {
+        return $(this).attr('data-score');
+  }
+});
+$('#star-rating').raty({
+  path: '/assets/',
+  scoreName: 'review[rate]'
+});

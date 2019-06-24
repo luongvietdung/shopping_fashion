@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @another_products = Product.limit(::Settings.thumbs).find(Product.pluck(:id))
     @thumbs = @product.images.all
-    @reviews = @product.reviews.page(params[:page]).per(10)
+    @reviews = @product.reviews.order("created_at asc")
     @review = @product.reviews.build
   end
 end
