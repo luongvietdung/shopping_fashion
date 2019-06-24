@@ -1,7 +1,7 @@
 tr.odd role="row" 
   td 
     = order.id
-  td
+  td 
     = order.full_name
   td
     = order.phone_number
@@ -17,3 +17,4 @@ tr.odd role="row"
   td
     = link_to "Detail", manager_order_path(order), class: "btn btn-danger mr-5"
     = link_to "Delete", manager_order_path(order), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-primary"
+
