@@ -2,7 +2,8 @@
 
 class StaticPageController < ApplicationController
   def index
-    @products = Product.all.order(created_at: :desc).limit(10)
+    @products = Product.order(created_at: :desc).limit(::Settings.products)
+    @top_products = Product.includes(:reviews).order("reviews.rate DESC").limit(::Settings.products)
     @cart.cart_total
   end
 end

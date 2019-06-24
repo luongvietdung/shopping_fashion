@@ -3,9 +3,9 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
-  before_action :store_user_location!, if: :storable_location?
   before_action :cart
   helper_method :cart
+  before_action :store_user_location!, if: :storable_location?
 
   def cart
     @cart ||= Cart.new(session[:cart])
@@ -18,6 +18,10 @@ class ApplicationController < ActionController::Base
       u.permit(:user_name, :full_name, :phone_number, :address,
                :email, :password, :password_confirmation)
     end
+  end
+
+  def after_sign_in_path_for(resource)
+    stored_location_for(resource) || root_url
   end
 
   def storable_location?

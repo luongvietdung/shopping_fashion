@@ -13,4 +13,4 @@ li.product.last
         span.woocommerce-Price-currencySymbol
           | $
         = product.price
-  = button_to "Add to cart", carts_path(product_id: product.id), remote: true , class: "btn btn-primary"
+  = button_to "Add to cart", carts_path(product_id: product.id), remote: true , class: "btn btn-danger"
