@@ -3,6 +3,7 @@ admin = Admin.create!(user_name: "BinhPham",
                      email: "binh@gmail.com",
                      password: "123456",
                      role: "admin")
+
 user = User.create!(user_name: "NinhPham",
                     email: "ninhpham@gmail.com",
                     password:    "123456",
