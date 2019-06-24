@@ -10,7 +10,6 @@ user = User.create!(user_name: "NinhPham",
                     full_name: "Georgio Armani",
                     phone_number: "0964980884",
                     address: "Thai Binh"
-                    )
 
 100.times do |n|
   user_name  = Faker::Name.name
@@ -25,7 +24,7 @@ user = User.create!(user_name: "NinhPham",
                )
   end
   
-100.times do |n|
+50.times do |n|
   user = User.all.to_a.sample
   full_name = User.pluck(:full_name).to_a.sample
   address = Faker::Address.street_address

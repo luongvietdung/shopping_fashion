@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     resources :users
     resources :products
     resources :orders, only: %i[index show destroy]
+
   end
 
   resources :users, only: %i[show edit update]
