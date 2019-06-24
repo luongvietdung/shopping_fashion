@@ -373,4 +373,12 @@ li a.active {
 .owl-carousel .owl-item img {
     display: unset;
     width: unset;
+
+  .wc-proceed-to-checkout{
+    text-align: center; 
+  }
+  
+  .woocommerce a.button.alt{
+    padding-top: 15px !important; 
+  }
 }

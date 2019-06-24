@@ -22,3 +22,4 @@
 //= require magnific-popup
 //= require lib/jquery.raty
 //= require lib/rate.min
+//= require custom
