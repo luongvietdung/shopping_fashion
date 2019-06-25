@@ -24,9 +24,9 @@ Rails.application.routes.draw do
   }, path: :manager
 
   get "/shop", to: "products#index"
-
   root "static_page#index"
   resources :products, only: [:show]
   resources :reviews, only: %i[create new show index]
   resources :carts, only: %i[index create destroy update]
+  resources :checkouts, only: %i[index create new]
 end

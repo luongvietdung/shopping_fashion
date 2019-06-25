@@ -12,15 +12,6 @@ user = User.create!(user_name: "NinhPham",
                     full_name: "Georgio Armani",
                     phone_number: "0964980884",
                     address: "Thai Binh"
-
- puts 'create users'
- user = User.create!(user_name: "NinhPham",
-                     email: "ninhpham@gmail.com",
-                     password:    "123456",
-                     password_confirmation: "123456",
-                     full_name: "Georgio Armani",
-                     phone_number: "0964980884",
-                     address: "Thai Binh"
                     )
 
 100.times do |n|
@@ -34,7 +25,7 @@ user = User.create!(user_name: "NinhPham",
                 phone_number: "0964980884",
                 address: "Thai Binh"
                )
-  
+end
 50.times do |n|
   user = User.all.to_a.sample
   full_name = User.pluck(:full_name).to_a.sample
@@ -65,3 +56,4 @@ orders = Order.order(:created_at).take(6)
   product = 1
   orders.each { |order| order.order_items.create!(quantity: quantity, product_id: product) } 
   end
+
