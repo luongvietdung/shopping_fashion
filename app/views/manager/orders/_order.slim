@@ -1,7 +1,7 @@
 tr.odd role="row" 
   td 
     = order.id
-  td.sorting_1 
+  td
     = order.full_name
   td
     = order.phone_number
@@ -14,3 +14,6 @@ tr.odd role="row"
       = f.hidden_field :order_id, value: order.id
       .form-group
         = f.select :status, Order.statuses.keys , {}, class: "sel", id:"status-btn", data: {value: f.object.status}
+  td
+    = link_to "Detail", manager_order_path(order), class: "btn btn-danger mr-5"
+    = link_to "Delete", manager_order_path(order), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-primary"

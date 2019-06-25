@@ -373,4 +373,55 @@ li a.active {
 .owl-carousel .owl-item img {
     display: unset;
     width: unset;
+
+  .wc-proceed-to-checkout{
+    text-align: center; 
+  }
+  
+  .woocommerce a.button.alt{
+    padding-top: 15px !important; 
+  }
+}
+.table-responsive {
+  overflow-x: unset;
+}
+.shop_table.woocommerce-checkout-review-order-table {
+  margin-left: 150px;
+  margin-right: 50px;
+  width: 1000.989583px;
+  height: 700.989583px;
+}
+.Product-Total {
+  border-bottom-width: 20px;
+  height: 50px;
+  font-size: 26px;
+  color: blue;
+}
+
+.order-total {
+  font-size: 20px;
+}
+
+.table-order {
+  color: #2a313e;
+}
+
+.product-name {
+  text-align: center;
+}
+
+.product-total {
+  text-align: center;
+}
+
+.total-price {
+  text-align: center;
+}
+
+.subtotal {
+  text-align: center;
+}
+
+.order-product-total {
+  background-color: #dddddd4d;
 }

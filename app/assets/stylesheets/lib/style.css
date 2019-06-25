@@ -5262,10 +5262,10 @@ a:hover, a:active {
   width: 65px;
 }
 .woocommerce table.shop_table .product-name, .woocommerce table.shop_table .product-price, .woocommerce table.shop_table .product-subtotal {
-  color: #717171;
+  color: #25262b;
 }
 .woocommerce table.shop_table .product-name a, .woocommerce table.shop_table .product-price a, .woocommerce table.shop_table .product-subtotal a {
-  color: #717171;
+  color: #25262b !important;
 }
 .woocommerce table.shop_table .product-name a:hover, .woocommerce table.shop_table .product-price a:hover, .woocommerce table.shop_table .product-subtotal a:hover {
   color: #F66249;
@@ -5355,6 +5355,8 @@ a:hover, a:active {
 }
 .woocommerce .wc-proceed-to-checkout a.checkout-button {
   background-color: #F66249;
+  text-align: center;
+  padding-top: 15px;
   width: 100%;
   height: 50px;
 }
@@ -5851,10 +5853,11 @@ a:hover, a:active {
   color: #F66249;
 }
 .cart .quantity input[type="number"] {
-  border: none;
+  border-color: #99FFCC;
   font-weight: bold;
-  width: 25px;
+  width: 30px !important;
   -moz-appearance: textfield;
+  color: #25262b !important;
 }
 .cart .quantity input[type="number"]::-webkit-outer-spin-button, .cart .quantity input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;

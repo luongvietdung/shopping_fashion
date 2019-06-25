@@ -11146,6 +11146,7 @@ a:focus {
 .sidebar .nav-item .nav-link span {
   font-size: 1.5rem;
   display: inline;
+  color: #f8f9fc;
 }
 
 .sidebar .nav-item.active .nav-link {

@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     root "static_pages#index"
     resources :users
     resources :products
-    resources :orders, only: [:index]
+    resources :orders, only: %i[index show destroy]
   end
 
   resources :users, only: %i[show edit update]
@@ -27,6 +27,6 @@ Rails.application.routes.draw do
 
   root "static_page#index"
   resources :products, only: [:show]
-  resources :carts, only: %i[create]
   resources :reviews, only: %i[create new show index]
+  resources :carts, only: %i[index create destroy update]
 end
