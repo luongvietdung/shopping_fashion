@@ -26,9 +26,11 @@ body
                   | &emsp;
                   = link_to "Signup", new_user_registration_path
             li.top-search
-              form#searchform_topbar.pull-right action="https://colorlib.com/tyche/" method="get" role="search" 
+              = search_form_for(@search, url: shop_path) do |f|
                 label
-                  span.screen-reader-text
-                  input#search-field-top-bar.search-field-top-bar name="s" placeholder=("Search ...") type="search" value="" /
-                button#search-top-bar-submit.search-top-bar-submit type="submit" 
-                  span.fa.fa-search
+                  .search-field-top-bar
+                    = f.search_field :name_cont, placeholder:"Search ..."
+                    = button_tag(type: 'submit', class: "search-top-bar-submit", id: 'search-top-bar-submit') do
+                      span.fa.fa-search
+
+                    

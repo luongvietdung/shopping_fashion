@@ -3588,7 +3588,7 @@ a:active {
 }
 
 .widget ul.product_list_widget li .star-rating {
-    display: block;
+    display: table-row-group;
     margin: 5px 0 5px 0;
 }
 

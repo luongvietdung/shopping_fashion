@@ -6,9 +6,14 @@ class ApplicationController < ActionController::Base
   before_action :cart
   helper_method :cart
   before_action :store_user_location!, if: :storable_location?
+  before_action :search
 
   def cart
     @cart ||= Cart.new(session[:cart])
+  end
+
+  def search
+    @search = Product.ransack(params[:q])
   end
 
   protected

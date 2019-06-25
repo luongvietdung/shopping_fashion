@@ -3198,7 +3198,7 @@ a:hover, a:active {
   color: #F66249;
 }
 .widget ul.product_list_widget li .star-rating {
-  display: block;
+  display: table-row-group;
   margin: 5px 0 5px 0;
 }
 .widget ul.product_list_widget li .woocommerce-Price-amount.amount {
