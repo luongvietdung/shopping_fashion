@@ -11,10 +11,9 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
   end
 
-  def destroy
+  def update
     @order = Order.find(params[:id])
     @order.update(status: 2)
-    flash[:success] = "Order Canceled"
-    redirect_to orders_path
+    redirect_to orders_path, succes: "Order Canceled"
   end
 end

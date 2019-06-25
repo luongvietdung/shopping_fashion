@@ -3,7 +3,8 @@
 class StaticPageController < ApplicationController
   def index
     @products = Product.order(created_at: :desc).limit(::Settings.products)
-    @top_products = Product.select("products.id, avg(reviews.rate), name, slug, price").joins(:reviews).group("products.id").order("avg(reviews.rate) DESC").limit(::Settings.products)
+    @top_products = @products.order_by_avg_rating
     @cart.cart_total
+    @random_products = Product.order("RAND()").limit(::Settings.products)
   end
 end

@@ -14,27 +14,18 @@
                   th.product-total Time
                   th.product-total Total
               tbody
-              - @order.order_items.each do |orderi|
-                tr.cart_item
-                  td.product-name
-                    = orderi.product.name
-                    strong.product-quantity  × #{orderi.product.quantity} 
-                  td.product-total
-                    = orderi.created_at.strftime("%b %d, %Y, %H:%M" ) 
-                  td.product-total
-                    span.woocommerce-Price-amount.amount #{number_to_currency(orderi.product.price)} 
-              tfoot
-              tr.order-total
-                th Total
-                td colspan="2"
-                  strong
-                    span.woocommerce-Price-amount.amount
-                      = number_to_currency(@order.subtotal)
-      #primary.content-area.col-md-4
-        p style="margin-bottom: 10px;" You can cancel your order in 2 hours
+              = render partial: "orders_list", collection: @order.order_items, as: :order
+        .col-md-4 style="color: black"
+          - if @order.time_left > 0
+            p You can cancel your order in 2 hours
+            p Time left (minutes)
+            = @order.time_left 
+            |  minutes
+          - else
+            p style="margin-bottom: 10px" You can't cancel your order (Time has expired)
       br/
     .col-md-7
       .btn.btn-link
-              h5 style="color: #ffffff"
-                = link_to orders_path, class:"btn btn-info" do
-                  span style="color: #ffffff" Back to orders
+        h5 style="color: #ffffff"
+          = link_to orders_path, class:"btn btn-info" do
+            span style="color: #ffffff" Back to orders

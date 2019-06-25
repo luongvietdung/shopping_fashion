@@ -13,6 +13,11 @@ class Product < ApplicationRecord
   validates :quantity, presence: true, numericality: { greater_than_or_equal_to: 1, only_integer: true }
   accepts_nested_attributes_for :images
 
+  scope :order_by_avg_rating, lambda {
+    select("products.id, avg(reviews.rate) AS avg_rating, name, slug ,price")
+      .joins(:reviews).group("products.id").order("avg_rating DESC")
+  }
+
   after_create :remake_slug
   def slug_candidates
     [

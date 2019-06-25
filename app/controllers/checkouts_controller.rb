@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 class CheckoutsController < ApplicationController
   before_action :authenticate_user!
 
   def create
     @order = current_user.orders.build(checkout_params)
     cart.data.each do |product_id, quantity|
-      @order.order_items.build(product_id: product_id, quantity: quantity) 
+      @order.order_items.build(product_id: product_id, quantity: quantity)
     end
     if @order.save
       flash[:success] = "Order created complete!"
