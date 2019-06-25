@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class ReviewsController < ApplicationController
+  before_action :authenticate_user!
+
   def create
     @product = Product.find(review_params[:product_id])
     @review = current_user.reviews.build(review_params)

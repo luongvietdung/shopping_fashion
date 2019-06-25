@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class CartsController < ApplicationController
-  before_action :product_lists, only: [:index, :update]
+  before_action :product_lists, only: %i[index update]
 
   def create
     @cart.add_product(params[:product_id])
@@ -21,6 +21,7 @@ class CartsController < ApplicationController
   end
 
   private
+
   def product_lists
     @product_lists = Product.where(id: @cart.data.keys)
   end

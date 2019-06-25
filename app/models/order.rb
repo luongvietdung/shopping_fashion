@@ -7,10 +7,10 @@ class Order < ApplicationRecord
   before_save :update_subtotal
 
   has_many :order_items, dependent: :destroy
+
   validates :address, presence: true, length: { maximum: 150 }
   validates :phone_number, presence: true, length: { minimum: 10 }
   validates :full_name, presence: true, length: { maximum: 50 }
-
 
   private
   def update_subtotal
@@ -20,4 +20,7 @@ class Order < ApplicationRecord
   def set_order_status
     self[:status] = :Ordered
   end
+  def destroyable
+    created_at + 2.hours < Time.current
+   end
 end

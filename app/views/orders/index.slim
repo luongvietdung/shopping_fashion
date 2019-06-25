@@ -1,0 +1,25 @@
+.breadcrumb-area.gray-bg
+  .container
+    .tyche-breadcrumbs
+      span
+        a
+          span itemprop="title"  Home/Shop/Checkout
+    #primary.content-area.tyche-has-sidebar style=("margin-left: 0px;") 
+      h3.page-title Your orders
+      h6 style="float: right" You can cancel your order after 2 hours
+      br/
+      #order_review.woocommerce-checkout-review-order
+        table.shop_table.woocommerce-checkout-review-order-table style="color: black"
+          thead
+            tr
+              th.product-name Address
+              th.product-total[style="width: 15%;"] Phone number
+              th.product-total Fullname
+              th.product-total[style="width: 15%;"] Time
+              th.product-total[style="width: 10%;"] Status
+              th.product-total Details
+            tbody
+              = render @orders
+      = paginate @orders
+        button.button.alt type="submit"  Proceed to PayPal
+      br/

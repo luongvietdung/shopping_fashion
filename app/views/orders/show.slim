@@ -1,0 +1,40 @@
+.breadcrumb-area.gray-bg
+  .container
+    span
+      a
+        span style="color: black" itemprop="title"  Home/Shop/Checkout
+      .tyche-breadcrumbs
+        #primary.content-area.col-md-7.tyche-has-sidebar style=("margin-left: 0px;") 
+          h3.page-title Order details
+          #order_review.woocommerce-checkout-review-order
+            table.shop_table.woocommerce-checkout-review-order-table style="color: black"
+              thead
+                tr
+                  th.product-name Product
+                  th.product-total Time
+                  th.product-total Total
+              tbody
+              - @order.order_items.each do |orderi|
+                tr.cart_item
+                  td.product-name
+                    = orderi.product.name
+                    strong.product-quantity  × #{orderi.product.quantity} 
+                  td.product-total
+                    = orderi.created_at.strftime("%b %d, %Y, %H:%M" ) 
+                  td.product-total
+                    span.woocommerce-Price-amount.amount #{number_to_currency(orderi.product.price)} 
+              tfoot
+              tr.order-total
+                th Total
+                td colspan="2"
+                  strong
+                    span.woocommerce-Price-amount.amount
+                      = number_to_currency(@order.subtotal)
+      #primary.content-area.col-md-4
+        p style="margin-bottom: 10px;" You can cancel your order in 2 hours
+      br/
+    .col-md-7
+      .btn.btn-link
+              h5 style="color: #ffffff"
+                = link_to orders_path, class:"btn btn-info" do
+                  span style="color: #ffffff" Back to orders

@@ -29,4 +29,5 @@ Rails.application.routes.draw do
   resources :reviews, only: %i[create new show index]
   resources :carts, only: %i[index create destroy update]
   resources :checkouts, only: %i[index create new]
+  resources :orders
 end
