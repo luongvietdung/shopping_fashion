@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     root "static_pages#index"
     resources :users
     resources :products
-    resources :orders, only: %i[index show destroy]
+    resources :orders, except: %i[new create]
   end
 
   resources :users, only: %i[show edit update]

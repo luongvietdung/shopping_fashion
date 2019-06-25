@@ -11323,6 +11323,7 @@ a:focus {
   .sidebar .nav-item .nav-link span {
     font-size: 2rem;
     display: inline;
+    color: #f8f9fc;
   }
   .sidebar .nav-item .nav-link[data-toggle="collapse"]::after {
     width: 1rem;
