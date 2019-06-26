@@ -752,7 +752,7 @@ input[type="file"] {
 
 #form-control-name {
   display: block;
-  width: 100%;
+  width: 100% !important;
   height: 34px;
   padding: 6px 12px;
   font-size: 14px;

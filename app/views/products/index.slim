@@ -9,8 +9,11 @@ div.archive.post-type-archive.post-type-archive-product.wp-custom-logo.woocommer
         = render "filter.slim"
         #woocommerce_top_rated_products-3.widget.woocommerce.widget_top_rated_products
           h5.widget-title style="margin-bottom: 20px;"
-            span Top rated products
-          = render partial: "side_bar", collection: @top_products, as: :product
+          br
+            h5 
+              span Top rated products
+          ul.product_list_widget style="width: 133px;"
+            = render partial: "side_bar", collection: @top_products, as: :product
       .col-md-8.tyche-has-sidebar style= "margin-left: 0px"
         h1.woocommerce-products-header__title.page-title
           | Shop
