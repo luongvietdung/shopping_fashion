@@ -2,6 +2,7 @@
 
 class CheckoutsController < ApplicationController
   before_action :authenticate_user!
+  before_action :check_cart
 
   def create
     @order = current_user.orders.build(checkout_params)
@@ -10,7 +11,8 @@ class CheckoutsController < ApplicationController
     end
     if @order.save
       flash[:success] = "Order created complete!"
-      redirect_to root_path
+      cart.data.clear
+      redirect_to orders_path
     else
       render "new"
     end
@@ -22,6 +24,12 @@ class CheckoutsController < ApplicationController
   end
 
   private
+
+  def check_cart
+    if cart.data.empty?
+      redirect_to carts_path, error: "No order items"
+    end
+  end
 
   def checkout_params
     params.require(:order).permit(:full_name, :address, :phone_number)

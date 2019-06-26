@@ -9,12 +9,11 @@ body
           .modal-body
             .form-group
               = f.label :email
-              = f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control"
+              = f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", style: "text-align: center"
             .form-group
               .clearfix
                 = f.label :password
-                = f.password_field :password, autocomplete: "current-password", class: "form-control"
-                
+                = f.password_field :password, autocomplete: "current-password", class: "form-control", style: "text-align: center"
             .modal-footer
               = f.check_box :remember_me
               | &ensp;

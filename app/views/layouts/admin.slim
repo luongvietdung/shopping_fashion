@@ -14,8 +14,7 @@ html
         #content-wrapper.d-flex.flex-column
           #content
             = render "manager/shared/topbar"
-            - flash.each do |message_type, message|
-              div class=("alert alert-#{message_type}") = message
+            = flash_messages
             = yield
           = render "manager/shared/footer"
       a.scroll-to-top.rounded href="#page-top" 

@@ -11655,7 +11655,9 @@ a:focus {
 }
 
 .bg-login-image {
-  background: url("https://bitly.vn/5ewa");
+  background: url("https://bitly.vn/5wtw");
+  height: 500px;
+  width: 100px;
   background-position: center;
   background-size: cover;
 }

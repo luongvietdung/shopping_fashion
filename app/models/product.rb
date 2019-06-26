@@ -3,7 +3,7 @@
 class Product < ApplicationRecord
   extend FriendlyId
   belongs_to :admin
-  has_many :order_items
+  has_many :order_items, dependent: :destroy
   has_many :images, as: :imageable
   has_many :reviews
   friendly_id :slug_candidates, use: %i[slugged finders]

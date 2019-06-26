@@ -321,14 +321,15 @@ li a.active {
 .col-md-8.col-xs-12.col-sm-6.col-lg-8 {
   left: 50px;
   bottom: 200px;
+  position: unset;
 }
 
 /* Edit/PassWord Profile */
 
-.edit-profile {
-  margin-left: 580px;
+.edit-profile { 
+  text-align: center;
   font-size: 50px;
-  color: #2279d3;
+  color: #25262c;
 }
 
 .form-group {
@@ -338,10 +339,6 @@ li a.active {
 
 .input-group .form-control {
   width: 567px;
-}
-
-.col-md-8 {
-  margin-left: 250px;
 }
 
 .form-group.col-md-12 {
@@ -382,8 +379,11 @@ li a.active {
   }
 }
 .shop_table.woocommerce-checkout-review-order-table {
-  width: 100%;
+  width: 50%;
   height: 15px;
+  table, th, td {
+  border: 1px solid black;
+  }
 }
 .Product-Total {
   border-bottom-width: 20px;
@@ -434,12 +434,12 @@ li a.active {
 }
 
 .btn-block{
-  width: 690px !important;
+  width: 100% !important;
 }
 .address{
   width: 680px !important;
 }
-<<<<<<< HEAD
+
 .button{
     border-color: #2c2f34;
     border-radius: 3px;
@@ -494,4 +494,12 @@ li a.active {
 
 .widget ul.product_list_widget li .star-rating {
   display: table-row-group !important;
+}
+
+.table-responsive {
+  overflow-x: unset;
+}
+
+.main-slider .main-slider-previous i, .main-slider .main-slider-next i {
+  visibility: hidden
 }

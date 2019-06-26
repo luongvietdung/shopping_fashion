@@ -10,5 +10,5 @@
             span.woocommerce-review__dash –
             time.woocommerce-review__published-date =review.created_at.strftime("%b %d, %Y, %H:%M" )
           .description
-            = review.content
+            = simple_format(review.content)
           br
