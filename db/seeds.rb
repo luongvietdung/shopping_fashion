@@ -25,6 +25,20 @@ user = User.create!(user_name: "NinhPham",
                 address: "Thai Binh"
                )
 end
+
+15.times do |n|
+  lname  = Faker::Name.name
+  quantity = Faker::Number.between(1, 10)
+  price = Faker::Number.between(10, 200)
+  description = Faker::Lorem.sentence(10)
+  admin = Admin.first
+  Product.create!(name:  lname,
+                  quantity: quantity,
+                  price: price,
+                  description: description,
+                  admin: admin)
+end
+
 50.times do |n|
   user = User.all.to_a.sample
   full_name = User.pluck(:full_name).to_a.sample
@@ -38,32 +52,9 @@ end
                status: status)
 end 
 
-100.times do |n|
-  lname  = Faker::Name.name
-  quantity = Faker::Number.between(1, 10)
-  price = Faker::Number.between(1, 1000)
-  description = Faker::Lorem.sentence(10)
-  admin = Admin.first
-  Product.create!(name:  lname,
-                  quantity: quantity,
-                  price: price,
-                  description: description,
-                  admin: admin)
-end
-
 orders = Order.order(:created_at).take(6)
-30.times do |n|
+5.times do |n|
   quantity = Faker::Number.between(1, 10)
-  product = 1
-  orders.each { |order| order.order_items.create!(quantity: quantity, product_id: product) } 
-end
-
-10.times do |n|
-  id = [310..350]
-  order = Order.first
-  productid = Faker::Number.between(1, 100)
-  quantity = Faker::Number.between(1, 10)
-  order.order_items.create!(id: id,
-                           product_id: productid,
-                           quantity: quantity)
+  productid = Faker::Number.between(1, 15)
+  orders.each { |order| order.order_items.create!(quantity: quantity, product_id: productid) } 
 end

@@ -22,7 +22,6 @@ module Manager
         end
         flash[:success] = "Product was successfully created."
         redirect_to manager_products_path
-
       else
         render :new
       end

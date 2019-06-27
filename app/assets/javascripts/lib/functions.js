@@ -166,8 +166,8 @@
           '<i class=\'fa fa-angle-left\'></i>',
           '<i class=\'fa fa-angle-right\'></i>' ],
         navClass: [ 'main-slider-previous', 'main-slider-next' ],
-        autoplay: true,
-        autoplayTimeout: 17000,
+        autoplay: 1500,
+        autoplayTimeout: 5500,
         responsive: {
           1: {
             nav: false

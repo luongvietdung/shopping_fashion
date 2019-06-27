@@ -4,10 +4,10 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all.page(params[:page]).per(::Settings.products)
     @filter = Product.ransack(params[:q])
-    @filter.sorts = 'price desc' if @filter.sorts.blank?
+    @filter.sorts = "price desc" if @filter.sorts.blank?
     @products_filter = @filter.result(distinct: true).page(params[:page]).per(::Settings.products)
     @products_search = @search.result.page(params[:page]).per(::Settings.products)
-    @top_products = @products.order_by_avg_rating
+    @top_products = Product.all.order_by_avg_rating.limit(::Settings.limit)
   end
 
   def show

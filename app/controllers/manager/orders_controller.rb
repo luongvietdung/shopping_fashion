@@ -5,7 +5,7 @@ module Manager
     before_action :load_order, only: %i[show edit update destroy]
 
     def index
-      @orders = Order.page(params[:page])
+      @orders = Order.page(params[:page]).order(created_at: :desc)
     end
 
     def show; end
