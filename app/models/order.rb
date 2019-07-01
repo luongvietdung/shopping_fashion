@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
 class Order < ApplicationRecord
-
   enum status: %i[Pending Ordered Closed Completed]
-
   belongs_to :user
   before_create :set_order_status
   before_save :update_subtotal

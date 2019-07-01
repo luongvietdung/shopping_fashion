@@ -725,10 +725,10 @@ input[type="checkbox"]:focus {
   border-style: solid;
 }
 
-/*.mx-auto.mb-4 {
+.mx-auto.mb-4 {
   bottom: 5px;
   top: 27px;
-}form-control-name*/
+}
 
 .justify-content-between.mb-4 {
   border-right-width: 50px;
