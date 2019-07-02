@@ -6,7 +6,7 @@ class ImageLinkUploader < CarrierWave::Uploader::Base
   process resize_to_limit: [2000, 2000]
 
   version :thumb do
-    process resize_to_fill: [260, 340]
+    process resize_to_fill: [340, 500]
   end
 
   version :thumb_nail do
