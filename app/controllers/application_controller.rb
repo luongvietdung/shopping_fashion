@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+# frozen_string_literal: truetion không quá 2 biến instance
 
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
@@ -8,15 +8,18 @@ class ApplicationController < ActionController::Base
   before_action :store_user_location!, if: :storable_location?
   before_action :search
 
+  include ApplicationHelper
+  
+  protected
+
   def cart
     @cart ||= Cart.new(session[:cart])
   end
 
   def search
     @search = Product.ransack(params[:q])
+    @products_search = @search.result.page(params[:page]).per(::Settings.products)
   end
-
-  protected
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up) do |u|

@@ -1,4 +1,8 @@
 $(".cart-text").html("<%= escape_javascript(render 'layouts/cart_text') %>")
 $(".shopping-cart").html("<%= escape_javascript(render 'carts/cart_detail', product_list: @product_lists, cart: @cart) %>")
-toastr["success"]("Updated quantity!");
+<% if params[:product][:quantity].to_i > 0 %>
+  toastr["success"]("Updated quantity!");
+<% else %>
+  toastr["error"]("Quantity larger than 0!");
+<% end %>
 <%= render "reset" %>

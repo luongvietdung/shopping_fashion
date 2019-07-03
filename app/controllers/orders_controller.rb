@@ -9,6 +9,10 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
+    if @order.status == "Closed"
+      flash[:error] = "Order canceled"
+      redirect_to orders_path
+    end
   end
 
   def update

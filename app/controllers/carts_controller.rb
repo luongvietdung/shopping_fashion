@@ -17,7 +17,9 @@ class CartsController < ApplicationController
   end
 
   def update
-    @cart.data[params[:product][:product_id]] = params[:product][:quantity].to_i
+    if params[:product][:quantity].to_i > 0
+      @cart.data[params[:product][:product_id]] = params[:product][:quantity].to_i
+    end
   end
 
   private

@@ -5999,6 +5999,7 @@ a:active {
     font-size: 19px;
     line-height: 19px;
     padding: 15px 0;
+    height: 60px;
 }
 
 .woocommerce ul.products li.product h3 {

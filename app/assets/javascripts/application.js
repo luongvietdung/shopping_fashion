@@ -23,3 +23,6 @@
 //= require lib/jquery.raty
 //= require lib/rate.min
 //= require custom
+//= require lib/js.cookie.min
+//= require lib/widget.min
+//= require lib/accounting.min
