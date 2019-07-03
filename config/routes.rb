@@ -31,4 +31,5 @@ Rails.application.routes.draw do
   resources :carts, only: %i[index create destroy update]
   resources :checkouts, only: %i[index create new]
   resources :orders, only: %i[update show index]
+  resources :blogs
 end
