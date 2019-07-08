@@ -4,6 +4,12 @@ admin = Admin.create!(user_name: "BinhPham",
                      password: "123456",
                      role: "admin")
 
+contributor = Admin.create!(user_name: "BinhPham",
+                     email: "ninh@gmail.com",
+                     password: "123456",
+                     role: "contributor")
+
+
 user = User.create!(user_name: "NinhPham",
                     email: "ninhpham@gmail.com",
                     password:    "123456",
@@ -63,5 +69,6 @@ admins = Admin.all
 30.times do |n|
   title = Faker::Lorem.sentence(10)
   content = Faker::Lorem.sentence(100)
-  admins.each {|admin| admin.blogs.create!(title: title, content: content)}
+  description = Faker::Lorem.sentence(10)
+  admins.each {|admin| admin.blogs.create!(title: title, content: content, description: description)}
 end

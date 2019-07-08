@@ -14,3 +14,4 @@
 //= require rails-ujs
 //= require bootstrap-sprockets
 //= require toastr
+//= require ckeditor/init

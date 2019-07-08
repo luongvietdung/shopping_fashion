@@ -2,7 +2,11 @@
 
 class Blog < ApplicationRecord
   belongs_to :admin
-  has_many :images
+  has_many :images, as: :imageable, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   validates :content, presence: true
+  validates :title, presence: true
+
+  mount_uploader :image, ImageUploader
 end

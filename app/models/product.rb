@@ -4,8 +4,9 @@ class Product < ApplicationRecord
   extend FriendlyId
   belongs_to :admin
   has_many :order_items, dependent: :destroy
-  has_many :images, as: :imageable
+  has_many :images, as: :imageable, dependent: :destroy
   has_many :reviews
+  has_many :comment, dependent: :destroy
   friendly_id :slug_candidates, use: %i[slugged finders]
 
   validates :name, presence: true
