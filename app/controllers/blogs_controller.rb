@@ -6,6 +6,8 @@ class BlogsController < ApplicationController
 
   def show
     @blog = Blog.find(params[:id])
+    @comments = @blog.comments.order("created_at asc")
+    @comment = @blog.comments.build
   end
 
   private

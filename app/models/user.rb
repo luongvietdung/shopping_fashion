@@ -3,6 +3,7 @@
 class User < ApplicationRecord
   has_many :orders
   has_many :reviews, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   validates :user_name, presence: true, length: { maximum: 50 }
   validates :full_name, presence: true, length: { maximum: 255 }

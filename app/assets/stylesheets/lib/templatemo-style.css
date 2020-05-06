@@ -721,7 +721,7 @@ input[type="checkbox"]:focus {
   padding: 5px 170px;
   border: 2px solid #fff;
   border-radius: 5px;
-  width: 492px
+  width: 492px;
   border-style: solid;
 }
 
@@ -765,7 +765,7 @@ input[type="file"] {
 }
 
 textarea {
-  height: 120px !important;"
+  height: 120px !important;
 }
 
 body {

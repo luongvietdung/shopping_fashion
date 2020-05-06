@@ -23,6 +23,7 @@ module Manager
         flash[:success] = "Product was successfully created."
         redirect_to manager_products_path
       else
+        @product.images.build
         render :new
       end
     end

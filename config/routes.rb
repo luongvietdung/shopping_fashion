@@ -32,4 +32,5 @@ Rails.application.routes.draw do
   resources :checkouts, only: %i[index create new]
   resources :orders, only: %i[update show index]
   resources :blogs
+  resources :comments, only: %i[create new show index]
 end

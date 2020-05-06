@@ -10824,10 +10824,10 @@ a:focus {
 .text-gray-800 {
   color: #3F51B5 !important;
   padding-top: 0px;
-  padding-bottom: 40px
+  padding-bottom: 40px;
   font-family: monospace;
   font-weight: bold;
-  font-size: 40px 
+  font-size: 40px;
 }
 
 .text-gray-900 {

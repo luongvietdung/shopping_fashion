@@ -10,6 +10,7 @@ body
           .row.tm-edit-product-row
             .col-md-12
               = form_for [:manager, @product], html: {multipart: true} do |f|
+                = render "users/shared/error_messages", object: f.object
                 .col-xl-6.col-lg-6.col-md-12
                   tbody
                     tr
@@ -29,11 +30,14 @@ body
                         label for="name" 
                           | Quantity
                         = f.number_field :quantity, id: "form-control-name", class: "form-control"
-                      .image-upload#photo_image
-                        = image_tag("defaul.png")
+                      .form-group.mb-3
+                        label for="name" 
+                          | Add new images
+                        br
                         label for="file_input" 
-                          span ADD NEW IMAGE
-                        = f.file_field :file, name: "product[images][]", id: "file_input", multiple: true
+                          span.btn.btn-info Choose images
+                        = f.file_field :file, name: "product[images][]", id: "file_input", multiple: true, class: "upload-image"
+                      #preview
                       .form-group.mb-3
                         = f.submit "Update Product Now",id: "btn-product", class: "btn btn-primary btn-block text-uppercase form-control"
                 .col-xl-6.col-lg-6.col-md-12.mx-auto.mb-4

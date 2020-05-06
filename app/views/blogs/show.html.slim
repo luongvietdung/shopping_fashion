@@ -32,18 +32,28 @@ body
                       li.post-comments
                         span.sep /
                         icon.fa.fa-comments
-                        a href="https://colorlib.com/tyche/2017/06/12/jackets-soul-color/#comments"  1 Comments
+                        a href="https://colorlib.com/tyche/2017/06/12/jackets-soul-color/#comments" #{@blog.comments.count} Comments
               .entry-content
                 p
                   = @blog.content
               .author-description
                 .col-md-2.tyche-avatar
-                  img.avatar.avatar-50.photo alt="" height="50" src="https://secure.gravatar.com/avatar/4f668af6daea3af014898a77c8929dd8?s=50&d=mm&r=g" srcset=("https://secure.gravatar.com/avatar/4f668af6daea3af014898a77c8929dd8?s=100&d=mm&r=g 2x") width="50" /
+                  img.avatar.avatar-50.photo alt="" height="50" srcset=("https://secure.gravatar.com/avatar/4f668af6daea3af014898a77c8929dd8?s=100&d=mm&r=g 2x") width="50" /
                 .col-md-10 itemscope="" itemtype="http://schema.org/Person" 
                   h4.post-author
-                    a href="https://colorlib.com/tyche/author/raibercristian/" rel="author" title=("Posts by raibercristian")  raibercristian
+                    a href="https://colorlib.com/tyche/author/raibercristian/" rel="author" title=("Posts by raibercristian") #{@blog.admin.user_name}
                   a.post-author-website href="" 
                   p Ed esmod sapien sit amet porttitor faucibus. Cras libero sapien, consequat ac sagittis non, dignissim et odio.Aenean iaculis sem eget lacus tempor, vel tristique eros congue. Mauris tempus ex ac ipsum rhoncus aliquet.
+              #comments.comments-area
+                h2.comments-title
+                  | #{@blog.comments.count} thought on :#{@blog.title}
+              #comment-list
+                - if @blog.comments.count > 0
+                    = render partial: "comments/comment", collection: @comments, as: :comment
+                - else
+                  | There are no comments yet   
+              #comment-form
+                = render "comments/form_comment", comment: @comment
         aside#secondary.col-md-4.widget-area role="complementary" 
           #recent-posts-2.widget_recent_entries
             h5.widget-title
